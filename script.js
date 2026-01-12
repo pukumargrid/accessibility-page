@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const searchBtn = document.querySelector(".search-btn");
-  const searchInput = document.querySelector(".search-box input");
+  const searchInput = document.getElementById("searchInput");
 
   searchBtn.addEventListener("click", function () {
     const searchTerm = searchInput.value.trim();
@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const subscribeForm = document.querySelector(".subscribe-form");
   const subscribeBtn = subscribeForm.querySelector("button");
-  const subscribeInput = subscribeForm.querySelector("input");
+  const subscribeInput = document.getElementById("subscribeEmail");
 
-  subscribeBtn.addEventListener("click", function (e) {
+  subscribeForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const email = subscribeInput.value.trim();
 
